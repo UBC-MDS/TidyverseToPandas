@@ -2,6 +2,15 @@
 
 Common tidyverse functions for pandas!
 
+There are different syntaxes for the same function in R and Python. This package aims to provide a common syntax for the most common functions in the tidyverse into pandas.
+
+These functions include:
+
+- `mutate()`:
+- `filter()`:
+- `select()`:
+- `arrange()`:
+
 ## Installation
 
 ```bash
