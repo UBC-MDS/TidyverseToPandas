@@ -1,7 +1,7 @@
 import pandas as pd
 
 
-def pandas_mutate(df, **kwargs):
+def mutate(df: pd.DataFrame, **kwargs) -> pd.DataFrame:
     """
     Add new columns to a Pandas DataFrame or modify existing ones, similar to dplyr's mutate in R.
 
