@@ -1,4 +1,3 @@
-from tidyversetopandas import tidyversetopandas
 import pandas as pd
 
 def select(dataframe, *columns):
@@ -17,3 +16,4 @@ def select(dataframe, *columns):
     >>> df = pd.DataFrame(data)
     """
     return dataframe[list(columns)]
+    
