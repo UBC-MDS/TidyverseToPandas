@@ -22,3 +22,4 @@ def arrange(df: pd.DataFrame, ascending: bool = True, *col_name:str):
     """
 
     return df.sort_values(by=list(col_name), ascending = ascending)
+    
