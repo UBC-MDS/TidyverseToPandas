@@ -6,14 +6,13 @@ def mutate(df: pd.DataFrame, **kwargs) -> pd.DataFrame:
     Add new columns to a Pandas DataFrame or modify existing ones, similar to dplyr's mutate in R.
 
     Parameters:
-        df (pd.DataFrame): The DataFrame to be mutated.
-
-        **kwargs: Keyword arguments where keys are the new column names and values are
+    df (pd.DataFrame): The DataFrame to be mutated.
+    **kwargs: Keyword arguments where keys are the new column names and values are
                 either a series, a callable (function), or a single value. If a callable is provided,
                 it should accept a DataFrame and return a Series.
 
     Returns:
-        pd.DataFrame: The mutated DataFrame with added or modified columns.
+    pd.DataFrame: The mutated DataFrame with added or modified columns.
 
     Example:
     mutated_df = pandas_mutate(df, new_column = lambda x: x['existing_column'] * 2)
@@ -25,7 +24,24 @@ def mutate(df: pd.DataFrame, **kwargs) -> pd.DataFrame:
             df[col_name] = col_value
     return df
 
-  
+def select(dataframe, *columns):
+    """
+    Select specific columns from a pandas DataFrame.
+
+    Parameters:
+    dataframe (pd.DataFrame): The DataFrame to select columns from.
+    columns (list of str): Column names to select.
+
+    Returns:
+    pdf.DataFrame: A DataFrame with only the selected columns.
+
+    Example DataFrame:
+    >>> data = {"column1': [1, 2, 3], 'column2': [4, 5, 6], 'column3': [7, 8, 9]}
+    >>> df = pd.DataFrame(data)
+    select(df, "column1", "column2")
+    """
+    return dataframe[list(columns)]
+
 def filter(df, query):
     """
     Filter rows in a pandas DataFrame based on a specified query string.
@@ -44,7 +60,6 @@ def filter(df, query):
     """
     return df.query(query)
 
-
 def arrange(df: pd.DataFrame, ascending: bool = True, *col_name:str):
     """
     Sort a Pandas dataframe in the ascending order
@@ -52,8 +67,8 @@ def arrange(df: pd.DataFrame, ascending: bool = True, *col_name:str):
     This function takes a Pandas dataframe and names of the columns, according to which the dataframe is sorted ascendingly/descendingly
 
     Parameters:
-    - df(pandas.DataFrame): The input dataframe object.
-    - *col_name(string)
+    df(pandas.DataFrame): The input dataframe object.
+    *col_name(string)
 
     Returns:
     -------
