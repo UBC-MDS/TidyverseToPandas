@@ -12,15 +12,6 @@
 #### Fitting into the Python Ecosystem
 While pandas is a powerful tool for data manipulation in Python, it can be challenging for those accustomed to R's tidyverse syntax. `tidyversetopandas` is unique in its approach to blend these two worlds. In the Python ecosystem, `tidyversetopandas` fits alongside packages that aim to incorporate tidyverse-like functionality into Python's data manipulation landscape, predominantly with pandas. The goal is to make pandas more accessible to those accustomed to tidyverse syntax.Two notable packages in this domain are [tidypandas](https://github.com/tidypyverse/tidypandas) and [siuba](https://github.com/machow/siuba). Both of them represent, similar to `tidyversetopandas`, efforts to bridge the gap between R's tidyverse approach and Python's pandas library, offering users familiar with R's data manipulation tools a more comfortable transition to Python's data science ecosystem. 
 
-There are different syntaxes for the same function in R and Python. This package aims to provide a common syntax for the most common functions in the tidyverse into pandas.
-
-These functions include:
-
-- `mutate()`
-- `filter()`
-- `select()`
-- `arrange()`
-
 ## Installation
 
 ```bash
