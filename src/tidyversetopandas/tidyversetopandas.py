@@ -1,5 +1,23 @@
 import pandas as pd
 
+def select(dataframe, *columns):
+    """
+    Select specific columns from a pandas DataFrame.
+
+    Parameters:
+    dataframe (pd.DataFrame): The DataFrame to select columns from.
+    columns (list of str): Column names to select.
+
+    Returns:
+    pdf.DataFrame: A DataFrame with only the selected columns.
+
+    Example DataFrame:
+    >>> data = {"column1': [1, 2, 3], 'column2': [4, 5, 6], 'column3': [7, 8, 9]}
+    >>> df = pd.DataFrame(data)
+    select(df, "column1", "column2")
+    """
+    return dataframe[list(columns)]
+
 def filter(df, query):
     """
     Filter rows in a pandas DataFrame based on a specified query string.
@@ -40,4 +58,5 @@ def arrange(df: pd.DataFrame, ascending: bool = True, *col_name:str):
     """
 
     return df.sort_values(by=list(col_name), ascending = ascending)
+
     
