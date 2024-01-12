@@ -18,7 +18,7 @@ def arrange(df: pd.DataFrame, ascending: bool = True, *col_name:str):
     
     Example:
     >>> df = pd.DataFrame(np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]]), columns=['a', 'b', 'c'])
-    >>> df_sorted = tidyversetopandas.arrange(df, 'a', 'c')
+    >>> df_sorted = arrange(df, 'a', 'c')
     """
 
     return df.sort_values(by=list(col_name), ascending = ascending)
