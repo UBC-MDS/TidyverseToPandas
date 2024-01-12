@@ -1,6 +1,5 @@
 import pandas as pd
 
-
 def filter(df, query):
     """
     Filter rows in a pandas DataFrame based on a specified query string.
@@ -20,14 +19,13 @@ def filter(df, query):
     return df.query(query)
 
 
-def arrange(df: pd.DataFrame, *col_name: str):
+def arrange(df: pd.DataFrame, ascending: bool = True, *col_name:str):
     """
     Sort a Pandas dataframe in the ascending order
 
-    This function takes a Pandas dataframe and names of the columns, according to which the dataframe is sorted ascendingly
+    This function takes a Pandas dataframe and names of the columns, according to which the dataframe is sorted ascendingly/descendingly
 
     Parameters:
-    -------
     - df(pandas.DataFrame): The input dataframe object.
     - *col_name(string)
 
@@ -38,6 +36,8 @@ def arrange(df: pd.DataFrame, *col_name: str):
 
     Example:
     >>> df = pd.DataFrame(np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]]), columns=['a', 'b', 'c'])
-    >>> df_sorted = tidyversetopandas.arrange(df, 'a', 'c')
+    >>> df_sorted = arrange(df, 'a', 'c')
     """
-    pass
+
+    return df.sort_values(by=list(col_name), ascending = ascending)
+    
