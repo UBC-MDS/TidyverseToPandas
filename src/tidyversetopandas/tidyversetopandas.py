@@ -1,10 +1,10 @@
 import pandas as pd
 
-def arrange(df: pd.DataFrame, *col_name:str):
+def arrange(df: pd.DataFrame, ascending: bool = True, *col_name:str):
     """
     Sort a Pandas dataframe in the ascending order
 
-    This function takes a Pandas dataframe and names of the columns, according to which the dataframe is sorted ascendingly
+    This function takes a Pandas dataframe and names of the columns, according to which the dataframe is sorted ascendingly/descendingly
 
     Parameters:
     -------
@@ -20,4 +20,5 @@ def arrange(df: pd.DataFrame, *col_name:str):
     >>> df = pd.DataFrame(np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]]), columns=['a', 'b', 'c'])
     >>> df_sorted = tidyversetopandas.arrange(df, 'a', 'c')
     """
-    pass
+
+    return df.sort_values(by=list(col_name), ascending = ascending)
