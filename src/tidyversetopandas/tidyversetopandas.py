@@ -7,7 +7,6 @@ def arrange(df: pd.DataFrame, ascending: bool = True, *col_name:str):
     This function takes a Pandas dataframe and names of the columns, according to which the dataframe is sorted ascendingly/descendingly
 
     Parameters:
-    -------
     - df(pandas.DataFrame): The input dataframe object.
     - *col_name(string)
 
