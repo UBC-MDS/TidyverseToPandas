@@ -24,6 +24,7 @@ def mutate(df: pd.DataFrame, **kwargs) -> pd.DataFrame:
             df[col_name] = col_value
     return df
 
+
 def select(dataframe, *columns):
     """
     Select specific columns from a pandas DataFrame.
@@ -41,6 +42,7 @@ def select(dataframe, *columns):
     select(df, "column1", "column2")
     """
     return dataframe[list(columns)]
+
 
 def filter(df, query):
     """
@@ -60,7 +62,8 @@ def filter(df, query):
     """
     return df.query(query)
 
-def arrange(df: pd.DataFrame, ascending: bool = True, *col_name:str):
+
+def arrange(df: pd.DataFrame, ascending: bool = True, *col_name: str):
     """
     Sort a Pandas dataframe in the ascending order
 
@@ -80,4 +83,4 @@ def arrange(df: pd.DataFrame, ascending: bool = True, *col_name:str):
     >>> df_sorted = arrange(df, 'a', 'c')
     """
 
-    return df.sort_values(by=list(col_name), ascending = ascending)
+    return df.sort_values(by=list(col_name), ascending=ascending)
