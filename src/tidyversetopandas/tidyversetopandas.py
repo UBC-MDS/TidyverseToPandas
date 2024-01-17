@@ -80,7 +80,13 @@ def arrange(df: pd.DataFrame, ascending: bool = True, *col_name: str):
 
     Example:
     >>> df = pd.DataFrame(np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]]), columns=['a', 'b', 'c'])
-    >>> df_sorted = arrange(df, 'a', 'c')
+    >>> df_sorted = arrange(df, True, 'a', 'c')
     """
+    try:
+        if any(not isinstance(c, str) for c in col_name):
+            raise TypeError("All column names must be of string type!")
+        sorted = df.sort_values(by=list(col_name), ascending=ascending)
 
-    return df.sort_values(by=list(col_name), ascending=ascending)
+    except KeyError:
+        raise KeyError("Column(s) does not exist in the provided dataframe!")
+    return sorted
