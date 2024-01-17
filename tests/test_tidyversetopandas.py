@@ -22,12 +22,14 @@ def test_mutate_new_col():
     df = tidyversetopandas.mutate(df, c=lambda x: x["a"] + x["b"])
     assert df["c"].tolist() == [5, 7, 9]
 
+
 def test_select_single_column():
     """Test select function with a single column"""
     df = pd.DataFrame({"a": [1, 2, 3], "b": [4, 5, 6]})
     result = tidyversetopandas.select(df, "a")
     assert list(result.columns) == ["a"]
     assert result["a"].tolist() == [1, 2, 3]
+
 
 def test_select_multiple_columns():
     """Test select function with multiple columns"""
@@ -37,11 +39,13 @@ def test_select_multiple_columns():
     assert result["a"].tolist() == [1, 2, 3]
     assert result["c"].tolist() == [7, 8, 9]
 
+
 def test_select_non_existing_column():
     """Test select function with a non-existing column"""
     df = pd.DataFrame({"a": [1, 2, 3], "b": [4, 5, 6]})
     with pytest.raises(Exception):
         tidyversetopandas.select(df, "non_existing_column")
+
 
 def test_select_no_columns():
     """Test select function with no columns specified"""
@@ -49,3 +53,4 @@ def test_select_no_columns():
     result = tidyversetopandas.select(df)
     assert result.empty
     assert len(result.columns) == 0
+    
