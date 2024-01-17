@@ -60,6 +60,11 @@ def filter(df, query):
         df = pd.DataFrame(data)
         filter(df, 'column1 > 1')
     """
+    if not isinstance(df, pd.DataFrame):
+        raise TypeError("df expect type of pd.DataFrame, got %s" % type(df).__name__)
+    if not isinstance(query, str):
+        raise TypeError("query expect type of string, got %s" % type(query).__name__)
+
     return df.query(query)
 
 
