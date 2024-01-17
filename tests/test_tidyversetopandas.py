@@ -50,4 +50,8 @@ class TestKeyError(unittest.TestCase):
         with self.assertRaises(KeyError):
             df = pd.DataFrame({"a": [1, 2, 3], "b": [4, 5, 6], "c": [0, 1, 9]})
             df_sorted = tidyversetopandas.arrange(df, False, 'd', 'e')
+    def test_invalid_column_name(self):
+        with self.assertRaises(TypeError):
+            df = pd.DataFrame({"a": [1, 2, 3], "b": [4, 5, 6], "c": [0, 1, 9]})
+            df_sorted = tidyversetopandas.arrange(df, False, ['a', 'b'], 3)
            
