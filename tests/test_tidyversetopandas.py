@@ -69,7 +69,7 @@ def test_arrange_key_error(input_df_2):
 
         
 def test_arrange_type_error(input_df_2):
-    """Test arrange function returns KeyError when input column name does not exist"""
+    """Test arrange function returns KeyError when input column name is not of str type"""
     with pytest.raises(TypeError):
         _ = tidyversetopandas.arrange(input_df_2, False, ['a', 'b'], 3)
 
