@@ -18,6 +18,12 @@ def input_df_2():
     return df
 
 
+@pytest.fixture
+def input_df_3():
+    df = pd.DataFrame({"a": [1, 2, 3], "b": [4, 5, 6], "c": [7, 8, 9]})
+    return df
+
+
 def test_mutate_no_func(input_df_1):
     """Test mutate function without a function"""
     df = tidyversetopandas.mutate(input_df_1, new_b=7)
@@ -37,34 +43,28 @@ def test_mutate_new_col(input_df_1):
 
 
 <<<<<<< HEAD
-def test_select_single_column():
+
+def test_select_single_column(input_df_3):
     """Test select function with a single column"""
-    df = pd.DataFrame({"a": [1, 2, 3], "b": [4, 5, 6]})
-    result = tidyversetopandas.select(df, "a")
+    result = tidyversetopandas.select(input_df_3, "a")
     assert list(result.columns) == ["a"]
     assert result["a"].tolist() == [1, 2, 3]
 
-
-def test_select_multiple_columns():
+def test_select_multiple_columns(input_df_3):
     """Test select function with multiple columns"""
-    df = pd.DataFrame({"a": [1, 2, 3], "b": [4, 5, 6], "c": [7, 8, 9]})
-    result = tidyversetopandas.select(df, "a", "c")
+    result = tidyversetopandas.select(input_df_3, "a", "c")
     assert list(result.columns) == ["a", "c"]
     assert result["a"].tolist() == [1, 2, 3]
     assert result["c"].tolist() == [7, 8, 9]
 
-
-def test_select_non_existing_column():
+def test_select_non_existing_column(input_df_3):
     """Test select function with a non-existing column"""
-    df = pd.DataFrame({"a": [1, 2, 3], "b": [4, 5, 6]})
     with pytest.raises(Exception):
-        tidyversetopandas.select(df, "non_existing_column")
+        tidyversetopandas.select(input_df_3, "non_existing_column")
 
-
-def test_select_no_columns():
+def test_select_no_columns(input_df_3):
     """Test select function with no columns specified"""
-    df = pd.DataFrame({"a": [1, 2, 3], "b": [4, 5, 6]})
-    result = tidyversetopandas.select(df)
+    result = tidyversetopandas.select(input_df_3)
     assert result.empty
     assert len(result.columns) == 0
     
