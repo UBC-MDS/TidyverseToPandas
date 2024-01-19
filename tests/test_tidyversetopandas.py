@@ -1,10 +1,6 @@
 from tidyversetopandas import tidyversetopandas
 import pandas as pd
 import pytest
-<<<<<<< HEAD
-=======
-
->>>>>>> main
 
 @pytest.fixture
 def input_df_1():
@@ -42,8 +38,6 @@ def test_mutate_new_col(input_df_1):
     assert df["c"].tolist() == [5, 7, 9]
 
 
-<<<<<<< HEAD
-
 def test_select_single_column(input_df_3):
     """Test select function with a single column"""
     result = tidyversetopandas.select(input_df_3, "a")
@@ -68,7 +62,7 @@ def test_select_no_columns(input_df_3):
     assert result.empty
     assert len(result.columns) == 0
     
-=======
+
 def test_filter_filter_row(input_df_2):
     """Test filter function that filter rows"""
     df = tidyversetopandas.filter(input_df_2, "A > 1")
@@ -97,4 +91,3 @@ def test_filter_query_error(input_df_2):
     """Test filter function that raise error for type query"""
     with pytest.raises(TypeError):
         _ = tidyversetopandas.filter(input_df_2, pd.DataFrame([]))
->>>>>>> main
