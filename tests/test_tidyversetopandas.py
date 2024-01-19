@@ -1,7 +1,5 @@
 from tidyversetopandas import tidyversetopandas
 import pandas as pd
-import pytest
-
 
 @pytest.fixture
 def input_df_1():
@@ -12,6 +10,12 @@ def input_df_1():
 @pytest.fixture
 def input_df_2():
     df = pd.DataFrame({"A": [1, 2, 3], "B": [4, 5, 6], "C": ["a", "b", "c"]})
+    return df
+
+
+@pytest.fixture
+def input_df_3():
+    df = pd.DataFrame({"a": [1, 2, 3], "b": [4, 5, 6], "c": [7, 8, 9]})
     return df
 
 
@@ -32,6 +36,37 @@ def test_mutate_new_col(input_df_1):
     df = tidyversetopandas.mutate(input_df_1, c=lambda x: x["a"] + x["b"])
     assert df["c"].tolist() == [5, 7, 9]
 
+
+def test_select_single_column(input_df_3):
+    """Test select function with a single column"""
+    result = tidyversetopandas.select(input_df_3, "a")
+    assert list(result.columns) == ["a"]
+    assert result["a"].tolist() == [1, 2, 3]
+
+def test_select_multiple_columns(input_df_3):
+    """Test select function with multiple columns"""
+    result = tidyversetopandas.select(input_df_3, "a", "c")
+    assert list(result.columns) == ["a", "c"]
+    assert result["a"].tolist() == [1, 2, 3]
+    assert result["c"].tolist() == [7, 8, 9]
+
+def test_select_non_existing_column(input_df_3):
+    """Test select function with a non-existing column"""
+    with pytest.raises(Exception):
+        tidyversetopandas.select(input_df_3, "non_existing_column")
+
+def test_select_no_columns(input_df_3):
+    """Test select function with no columns specified"""
+    result = tidyversetopandas.select(input_df_3)
+    assert result.empty
+    assert len(result.columns) == 0
+
+def test_select_type_error():
+    """Test select function with a non-DataFrame input"""
+    with pytest.raises(TypeError):
+        non_df = "This is not a DataFrame"
+        select(non_df, "a")
+    
 
 def test_filter_filter_row(input_df_2):
     """Test filter function that filter rows"""
