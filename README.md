@@ -6,6 +6,7 @@
 
 **tidyversetopandas** is a Python package designed for users familiar with R's tidyverse who are transitioning to Python. It bridges the syntax gap between R and Python by offering pandas equivalents to popular tidyverse functions. This package is particularly beneficial for data scientists and analysts who seek to leverage pandas' robust capabilities with the familiar syntax of tidyverse.
 
+- **Installation:** 🏗 WIP
 - **Documentation:** 🏗 WIP
 - **Source code:** https://github.com/UBC-MDS/TidyverseToPandas
 - **Bug reports:** https://github.com/UBC-MDS/TidyverseToPandas/issues
@@ -39,6 +40,10 @@ from tidyversetopandas import tidyversetopandas
 # Load your dataframe in pandas
 
 # Use the functions:
+df = ttp.mutate(df, b=lambda x: x["B"] * 2)
+df = ttp.filter(df, "A > 1 and B < 6")
+df = ttp.arrange(df, True, "A", "C")
+df = ttp.select(df, "A")
 ```
 
 ## 📖 Developer Guide

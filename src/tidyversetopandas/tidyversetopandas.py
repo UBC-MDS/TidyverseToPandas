@@ -15,7 +15,7 @@ def mutate(df: pd.DataFrame, **kwargs) -> pd.DataFrame:
     pd.DataFrame: The mutated DataFrame with added or modified columns.
 
     Example:
-    mutated_df = pandas_mutate(df, new_column = lambda x: x['existing_column'] * 2)
+    mutated_df = ttp.mutate(df, new_column = lambda x: x['existing_column'] * 2)
     """
 
     if not isinstance(df, pd.DataFrame):
@@ -49,7 +49,7 @@ def select(dataframe, *columns):
     Example DataFrame:
     >>> data = {'column1': [1, 2, 3], 'column2': [4, 5, 6], 'column3': [7, 8, 9]}
     >>> df = pd.DataFrame(data)
-    >>> select(df, "column1", "column2")
+    >>> ttp.select(df, "column1", "column2")
     """
 
     if not isinstance(dataframe, pd.DataFrame):
@@ -79,7 +79,7 @@ def filter(df, query):
     Example:
         data = {'column1': [1, 2, 3], 'column2': [4, 5, 6], 'column3': [7, 8, 9]}
         df = pd.DataFrame(data)
-        filter(df, 'column1 > 1')
+        ttp.filter(df, 'column1 > 1')
     """
     if not isinstance(df, pd.DataFrame):
         raise TypeError("df expect type of pd.DataFrame, got %s" % type(df).__name__)
@@ -106,7 +106,7 @@ def arrange(df: pd.DataFrame, ascending: bool = True, *col_name: str):
 
     Example:
     >>> df = pd.DataFrame(np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]]), columns=['a', 'b', 'c'])
-    >>> df_sorted = arrange(df, True, 'a', 'c')
+    >>> df_sorted = ttp.arrange(df, True, 'a', 'c')
     """
     try:
         if any(not isinstance(c, str) for c in col_name):
