@@ -4,12 +4,6 @@ import pytest
 
 
 @pytest.fixture
-def input_df_2():
-    df = pd.DataFrame({"A": [1, 2, 3], "B": [4, 5, 6], "C": ["a", "b", "c"]})
-    return df
-
-
-@pytest.fixture
 def input_df_1():
     df = pd.DataFrame({"a": [1, 2, 3], "b": [4, 5, 6]})
     return df
