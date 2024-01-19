@@ -56,7 +56,7 @@ df = ttp.select(df, "A")
 
 ```bash
 conda env create -f environment.yml
-conda activate 522
+conda activate tidyversetopandas
 ```
 
 3. Make sure `poetry` is installed. If not, install it [here](https://python-poetry.org/docs/). Once installed, run the following command to install the package in development mode.
