@@ -34,13 +34,28 @@ def select(dataframe, *columns):
     columns (list of str): Column names to select.
 
     Returns:
-    pdf.DataFrame: A DataFrame with only the selected columns.
+    pd.DataFrame: A DataFrame with only the selected columns.
+
+    Raises:
+    TypeError: If the input dataframe is not a pandas DataFrame.
+    ValueError: If any of the specified columns are not in the dataframe.
 
     Example DataFrame:
-    >>> data = {"column1': [1, 2, 3], 'column2': [4, 5, 6], 'column3': [7, 8, 9]}
+    >>> data = {'column1': [1, 2, 3], 'column2': [4, 5, 6], 'column3': [7, 8, 9]}
     >>> df = pd.DataFrame(data)
-    select(df, "column1", "column2")
+    >>> select(df, "column1", "column2")
     """
+
+    if not isinstance(dataframe, pd.DataFrame):
+        raise TypeError("The input 'dataframe' should be a pandas DataFrame.")
+
+    if not columns:
+        raise ValueError("At least one column must be specified.")
+
+    for col in columns:
+        if col not in dataframe.columns:
+            raise ValueError(f"Column '{col}' not found in the DataFrame.")
+
     return dataframe[list(columns)]
 
 
