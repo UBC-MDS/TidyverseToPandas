@@ -1,6 +1,5 @@
 from tidyversetopandas import tidyversetopandas
 import pandas as pd
-import unittest
 import pytest
 
 @pytest.fixture
