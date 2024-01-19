@@ -1,6 +1,5 @@
 from tidyversetopandas import tidyversetopandas
 import pandas as pd
-import pytest
 
 @pytest.fixture
 def input_df_1():
