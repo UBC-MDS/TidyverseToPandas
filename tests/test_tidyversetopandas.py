@@ -60,6 +60,12 @@ def test_select_no_columns(input_df_3):
     result = tidyversetopandas.select(input_df_3)
     assert result.empty
     assert len(result.columns) == 0
+
+def test_select_type_error():
+    """Test select function with a non-DataFrame input"""
+    with pytest.raises(TypeError):
+        non_df = "This is not a DataFrame"
+        select(non_df, "a")
     
 
 def test_filter_filter_row(input_df_2):
