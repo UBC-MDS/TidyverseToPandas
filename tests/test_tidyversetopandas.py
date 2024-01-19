@@ -45,6 +45,18 @@ def test_mutate_new_col(input_df_1):
     assert df["c"].tolist() == [5, 7, 9]
 
 
+def test_mutate_df_type_error():
+    """Test mutate function that raise error for type dataframe"""
+    with pytest.raises(TypeError):
+        _ = tidyversetopandas.mutate("abc", new_b=7)
+
+
+def test_mutate_no_column_error(input_df_1):
+    """Test mutate function that raise error for no column specified"""
+    with pytest.raises(ValueError):
+        _ = tidyversetopandas.mutate(input_df_1)
+
+
 def test_arrange_return_df(input_df_2):
     """Test the output is a pandas.DataFrame object"""
     df_sorted = tidyversetopandas.arrange(input_df_2, True, "A", "C")
