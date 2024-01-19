@@ -17,6 +17,12 @@ def mutate(df: pd.DataFrame, **kwargs) -> pd.DataFrame:
     Example:
     mutated_df = pandas_mutate(df, new_column = lambda x: x['existing_column'] * 2)
     """
+
+    if not isinstance(df, pd.DataFrame):
+        raise TypeError("The input 'df' should be a pandas DataFrame.")
+    if not kwargs:
+        raise ValueError("At least one column must be specified.")
+
     for col_name, col_value in kwargs.items():
         if callable(col_value):
             df[col_name] = col_value(df)
