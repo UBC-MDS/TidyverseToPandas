@@ -1,33 +1,33 @@
 import pandas as pd
 
 
-def mutate(df: pd.DataFrame, **kwargs) -> pd.DataFrame:
+def mutate(df: pd.DataFrame, expr: str) -> pd.DataFrame:
     """
     Add new columns to a Pandas DataFrame or modify existing ones, similar to dplyr's mutate in R.
 
     Parameters:
     df (pd.DataFrame): The DataFrame to be mutated.
-    **kwargs: Keyword arguments where keys are the new column names and values are
-                either a series, a callable (function), or a single value. If a callable is provided,
-                it should accept a DataFrame and return a Series.
+    expr (str): A string representing the expression to be evaluated. The expression should be a valid Python expression.
 
     Returns:
     pd.DataFrame: The mutated DataFrame with added or modified columns.
 
     Example:
-    mutated_df = ttp.mutate(df, new_column = lambda x: x['existing_column'] * 2)
+    mutated_df = ttp.mutate(df, "new_column = column1 + column2")
+    mutated_df = ttp.mutate(df, "column1 = column1 * 2")
     """
 
     if not isinstance(df, pd.DataFrame):
         raise TypeError("The input 'df' should be a pandas DataFrame.")
-    if not kwargs:
-        raise ValueError("At least one column must be specified.")
+    if not isinstance(expr, str):
+        msg = f"expr must be a string to be evaluated, {type(expr)} given"
+        raise ValueError(msg)
 
-    for col_name, col_value in kwargs.items():
-        if callable(col_value):
-            df[col_name] = col_value(df)
-        else:
-            df[col_name] = col_value
+    try:
+        df.eval(expr, inplace=True)
+    except Exception as e:
+        raise ValueError(f"Error evaluating the expression: %s" % e)
+
     return df
 
 

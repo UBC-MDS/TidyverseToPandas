@@ -23,19 +23,19 @@ def input_df_3():
 
 def test_mutate_no_func(input_df_1):
     """Test mutate function without a function"""
-    df = ttp.mutate(input_df_1, new_b=7)
+    df = ttp.mutate(input_df_1, "new_b=7")
     assert df["new_b"].tolist() == [7, 7, 7]
 
 
 def test_mutate_same_col(input_df_1):
     """Test mutate function that overwrites existing column"""
-    df = ttp.mutate(input_df_1, b=lambda x: x["b"] * 2)
+    df = ttp.mutate(input_df_1, "b = b * 2")
     assert df["b"].tolist() == [8, 10, 12]
 
 
 def test_mutate_new_col(input_df_1):
     """Test mutate function that creates new column"""
-    df = ttp.mutate(input_df_1, c=lambda x: x["a"] + x["b"])
+    df = ttp.mutate(input_df_1, "c = a + b")
     assert df["c"].tolist() == [5, 7, 9]
 
 
@@ -45,10 +45,10 @@ def test_mutate_df_type_error():
         _ = ttp.mutate("abc", new_b=7)
 
 
-def test_mutate_no_column_error(input_df_1):
+def test_mutate_wrong_expression_error(input_df_1):
     """Test mutate function that raise error for no column specified"""
     with pytest.raises(ValueError):
-        _ = ttp.mutate(input_df_1)
+        _ = ttp.mutate(input_df_1, "asdasd")
 
 
 def test_arrange_return_df(input_df_2):
