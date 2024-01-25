@@ -45,6 +45,12 @@ def test_mutate_df_type_error():
         _ = ttp.mutate("abc", new_b=7)
 
 
+def test_mutate_expr_type_error(input_df_1):
+    """Test mutate function that raise error for type expression"""
+    with pytest.raises(ValueError):
+        _ = ttp.mutate(input_df_1, 7)
+
+
 def test_mutate_wrong_expression_error(input_df_1):
     """Test mutate function that raise error for no column specified"""
     with pytest.raises(ValueError):
