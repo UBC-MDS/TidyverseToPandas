@@ -42,7 +42,7 @@ def test_mutate_new_col(input_df_1):
 def test_mutate_df_type_error():
     """Test mutate function that raise error for type dataframe"""
     with pytest.raises(TypeError):
-        _ = ttp.mutate("abc", new_b=7)
+        _ = ttp.mutate("abc", "new_b=7")
 
 
 def test_mutate_expr_type_error(input_df_1):
