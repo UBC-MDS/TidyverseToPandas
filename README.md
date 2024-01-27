@@ -2,11 +2,13 @@
 <img src="https://i.ibb.co/djVdtn9/ttp-logo.png" width="350">
 </h1>
 
+[![Documentation Status](https://readthedocs.org/projects/tidyversetopandas/badge/?version=latest)](https://tidyversetopandas.readthedocs.io/en/latest/?badge=latest)
+
 ## 💪 Bringing the Power of tidyverse to Pandas!
 
 **tidyversetopandas** is a Python package designed for users familiar with R's tidyverse who are transitioning to Python. It bridges the syntax gap between R and Python by offering pandas equivalents to popular tidyverse functions. This package is particularly beneficial for data scientists and analysts who seek to leverage pandas' robust capabilities with the familiar syntax of tidyverse.
 
-- **Installation:** 🏗 WIP
+- **Installation:** [installation](#⚙️-installation)
 - **Documentation:** [https://tidyversetopandas.readthedocs.io/en/latest/example.html](https://tidyversetopandas.readthedocs.io/en/latest/example.html)
 - **Source code:** [https://github.com/UBC-MDS/TidyverseToPandas](https://github.com/UBC-MDS/TidyverseToPandas)
 - **Bug reports:** [https://github.com/UBC-MDS/TidyverseToPandas/issues](https://github.com/UBC-MDS/TidyverseToPandas/issues)
@@ -24,27 +26,46 @@ While pandas is a powerful tool for data manipulation in Python, it can be chall
 
 ## ⚙️ Installation
 
-_Note: This package is currently under development and not yet available on PyPI. To install, please clone the repository and install the package locally. Follow the instructions in [Developer Guide](#Developer-Guide) to install the package in development mode._
-
 ```bash
 $ pip install tidyversetopandas
 ```
 
 ## 🏃 Usage
 
-Currently, the package is under development so follow [Developer Guide](#Developer-Guide) to install the package in development mode.
+Lets try to use `tidyversetopandas`.
+
+### Import package
+Import the package into your Python environment after installation:
 
 ```python
-from tidyversetopandas import tidyversetopandas
+from tidyversetopandas import tidyversetopandas as ttp
+```
+### Loading Data
+Begin by loading your data into a pandas dataframe. This package assumes that you have a dataframe ready for manipulation named `df`.
 
-# Load your dataframe in pandas
+### Mutate
+Use `mutate` to create new columns or modify existing ones. The function allows lambda expressions for complex operations. For example, to double the values in column 'B'
 
-# Use the functions:
+```
 df = ttp.mutate(df, b=lambda x: x["B"] * 2)
+```
+### Filter
+The `filter` function is used to subset dataframes based on specified conditions. For instance, to select rows where 'A' is greater than 1 and 'B' is less than 6
+```
 df = ttp.filter(df, "A > 1 and B < 6")
+```
+### Arrange
+
+Sort your dataframe with `arrange`. You can sort by multiple columns and specify ascending or descending order. For example, to sort by 'A' in ascending order and then by 'C'
+```
 df = ttp.arrange(df, True, "A", "C")
+```
+### Select
+To keep only certain columns, use the `select` function. For example, to keep only the column 'A'
+```
 df = ttp.select(df, "A")
 ```
+
 
 ## 📖 Developer Guide
 
