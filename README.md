@@ -8,7 +8,7 @@
 
 **tidyversetopandas** is a Python package designed for users familiar with R's tidyverse who are transitioning to Python. It bridges the syntax gap between R and Python by offering pandas equivalents to popular tidyverse functions. This package is particularly beneficial for data scientists and analysts who seek to leverage pandas' robust capabilities with the familiar syntax of tidyverse.
 
-- **Installation:** [installation](%EF%B8%8F-installation)
+- **Installation:** [installation](#%EF%B8%8F-installation)
 - **Documentation:** [https://tidyversetopandas.readthedocs.io/en/latest/example.html](https://tidyversetopandas.readthedocs.io/en/latest/example.html)
 - **Source code:** [https://github.com/UBC-MDS/TidyverseToPandas](https://github.com/UBC-MDS/TidyverseToPandas)
 - **Bug reports:** [https://github.com/UBC-MDS/TidyverseToPandas/issues](https://github.com/UBC-MDS/TidyverseToPandas/issues)
