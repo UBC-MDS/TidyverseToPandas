@@ -1,6 +1,7 @@
 <h1 align="center">
 <img src="https://i.ibb.co/djVdtn9/ttp-logo.png" width="350">
 </h1>
+
 [![Documentation Status](https://readthedocs.org/projects/tidyversetopandas/badge/?version=latest)](https://tidyversetopandas.readthedocs.io/en/latest/?badge=latest)
 
 ## 💪 Bringing the Power of tidyverse to Pandas!
