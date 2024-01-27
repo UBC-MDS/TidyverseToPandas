@@ -1,4 +1,5 @@
 ```{include} ../README.md
+
 ```
 
 ```{toctree}
@@ -6,6 +7,7 @@
 :hidden:
 
 example.ipynb
+tutorial.ipynb
 changelog.md
 contributing.md
 conduct.md

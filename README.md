@@ -1,5 +1,5 @@
 <h1 align="center">
-<img src="img/ttp_logo.png" width="350">
+<img src="https://i.ibb.co/djVdtn9/ttp-logo.png" width="350">
 </h1>
 
 ## 💪 Bringing the Power of tidyverse to Pandas!
