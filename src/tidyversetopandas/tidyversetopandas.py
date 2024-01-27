@@ -24,11 +24,11 @@ def mutate(df: pd.DataFrame, expr: str) -> pd.DataFrame:
         raise ValueError(msg)
 
     try:
-        df.eval(expr, inplace=True)
+        res = df.eval(expr)
     except Exception as e:
         raise ValueError(f"Error evaluating the expression: %s" % e)
 
-    return df
+    return res
 
 
 def select(dataframe, *columns):
