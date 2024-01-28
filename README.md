@@ -44,10 +44,10 @@ from tidyversetopandas import tidyversetopandas as ttp
 Begin by loading your data into a pandas dataframe. This package assumes that you have a dataframe ready for manipulation named `df`.
 
 ### Mutate
-Use `mutate` to create new columns or modify existing ones. The function allows lambda expressions for complex operations. For example, to double the values in column 'B'
+Use `mutate` to create new columns or modify existing ones. We can do this by writing the expression we want as a string.
 
 ```
-df = ttp.mutate(df, b=lambda x: x["B"] * 2)
+df = ttp.mutate(df, "b=b*2")
 ```
 ### Filter
 The `filter` function is used to subset dataframes based on specified conditions. For instance, to select rows where 'A' is greater than 1 and 'B' is less than 6
