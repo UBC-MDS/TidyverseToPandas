@@ -2,7 +2,7 @@
 <img src="https://i.ibb.co/djVdtn9/ttp-logo.png" width="350">
 </h1>
 
-[![Documentation Status](https://readthedocs.org/projects/tidyversetopandas/badge/?version=latest)](https://tidyversetopandas.readthedocs.io/en/latest/?badge=latest)
+[![Documentation Status](https://readthedocs.org/projects/tidyversetopandas/badge/?version=latest)](https://tidyversetopandas.readthedocs.io/en/latest/?badge=latest) [![PyPI version](https://badge.fury.io/py/tidyversetopandas.svg)](https://badge.fury.io/py/tidyversetopandas)
 
 ## 💪 Bringing the Power of tidyverse to Pandas!
 
@@ -27,7 +27,7 @@ While pandas is a powerful tool for data manipulation in Python, it can be chall
 ## ⚙️ Installation
 
 ```bash
-$ pip install tidyversetopandas
+pip install tidyversetopandas
 ```
 
 ## 🏃 Usage
@@ -35,37 +35,48 @@ $ pip install tidyversetopandas
 Lets try to use `tidyversetopandas`.
 
 ### Import package
+
 Import the package into your Python environment after installation:
 
 ```python
 from tidyversetopandas import tidyversetopandas as ttp
 ```
+
 ### Loading Data
+
 Begin by loading your data into a pandas dataframe. This package assumes that you have a dataframe ready for manipulation named `df`.
 
 ### Mutate
+
 Use `mutate` to create new columns or modify existing ones. We can do this by writing the expression we want as a string.
 
 ```
 df = ttp.mutate(df, "b=b*2")
 ```
+
 ### Filter
+
 The `filter` function is used to subset dataframes based on specified conditions. For instance, to select rows where 'A' is greater than 1 and 'B' is less than 6
+
 ```
 df = ttp.filter(df, "A > 1 and B < 6")
 ```
+
 ### Arrange
 
 Sort your dataframe with `arrange`. You can sort by multiple columns and specify ascending or descending order. For example, to sort by 'A' in ascending order and then by 'C'
+
 ```
 df = ttp.arrange(df, True, "A", "C")
 ```
+
 ### Select
+
 To keep only certain columns, use the `select` function. For example, to keep only the column 'A'
+
 ```
 df = ttp.select(df, "A")
 ```
-
 
 ## 📖 Developer Guide
 
