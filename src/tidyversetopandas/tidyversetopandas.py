@@ -100,14 +100,15 @@ def arrange(df: pd.DataFrame, ascending: bool = True, *col_name: str):
     *col_name(string)
 
     Returns:
-    -------
-    pd.DataFrame
-        The sorted pandas dataframe with the values in the specified column increasing from the first row to the end of the dataframe
+    pd.DataFrame: The sorted pandas dataframe with the values in the specified column increasing from the first row to the end of the dataframe
 
     Example:
     >>> df = pd.DataFrame(np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]]), columns=['a', 'b', 'c'])
     >>> df_sorted = ttp.arrange(df, True, 'a', 'c')
     """
+    if not isinstance(df, pd.DataFrame):
+        raise TypeError("df expect type of pd.DataFrame, got %s" % type(df).__name__)
+ 
     try:
         if any(not isinstance(c, str) for c in col_name):
             raise TypeError("All column names must be of string type!")
