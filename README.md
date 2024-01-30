@@ -111,6 +111,13 @@ To run tests with coverage, use the following command:
 pytest tests/ --cov=tidyversetopandas
 ```
 
+To view the coverage report, use the following command:
+
+```bash
+pytest --cov=tidyversetopandas --cov-report html tests/
+```
+This will create a `htmlcov` directory containing the coverage report in HTML format. Open the index.html file in this directory with a web browser to view the detailed coverage report.
+
 ## 🤝 Contributing
 
 Interested in contributing? Check out the contributing guidelines. Please note that this project is released with a Code of Conduct. By contributing to this project, you agree to abide by its terms.
