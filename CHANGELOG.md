@@ -8,7 +8,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 ## v0.2.0 (01/030/2024)
 
 ### Added
--   [Commit] - message.
+-   [Commit 7ccc00dc629c357058aeb145fd06d768083e3c86] - added pytest coverage report html command in README.md.
 
 ### Changed
 -   [Commit] - message.
