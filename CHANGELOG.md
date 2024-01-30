@@ -2,6 +2,25 @@
 
 
 
+## v0.2.0 (2024-01-30)
+
+### Feature
+
+* feat(edit readme): test release again ([`97d548f`](https://github.com/UBC-MDS/TidyverseToPandas/commit/97d548f46f764c53fd1387357b7baaa5ebe7436b))
+
+### Unknown
+
+* Merge pull request #85 from UBC-MDS/786213750-patch-1
+
+feat(edit readme): test release again ([`58904a6`](https://github.com/UBC-MDS/TidyverseToPandas/commit/58904a6625c682c08c61b0cd4d95843a631c2938))
+
+* Merge pull request #84 from UBC-MDS/76-add-automatic-python-semantic-release
+
+Test python semantic release again ([`efc01b2`](https://github.com/UBC-MDS/TidyverseToPandas/commit/efc01b2ca56c02d882e6f68362036be56bdc656f))
+
+* update poetry dependency with python release ([`1e0f301`](https://github.com/UBC-MDS/TidyverseToPandas/commit/1e0f301e7be04d7edaaa05f94f6cb3a987bc5350))
+
+
 ## v0.1.0 (2024-01-30)
 
 ### Unknown
