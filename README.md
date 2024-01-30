@@ -2,7 +2,7 @@
 <img src="https://i.ibb.co/djVdtn9/ttp-logo.png" width="350">
 </h1>
 
-[![Documentation Status](https://readthedocs.org/projects/tidyversetopandas/badge/?version=latest)](https://tidyversetopandas.readthedocs.io/en/latest/?badge=latest) [![PyPI version](https://badge.fury.io/py/tidyversetopandas.svg)](https://badge.fury.io/py/tidyversetopandas)
+[![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active) [![Python 3.9.0](https://img.shields.io/badge/python-3.9.0-blue.svg)](https://www.python.org/downloads/release/python-390/) [![codecov](https://codecov.io/gh/UBC-MDS/TidyverseToPandas/branch/main/graph/badge.svg?token=3Z3Z3Z3Z3Z)](https://codecov.io/gh/UBC-MDS/TidyverseToPandas) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![version](https://img.shields.io/pypi/v/tidyversetopandas)](https://pypi.org/project/tidyversetopandas/)[![Documentation Status](https://readthedocs.org/projects/tidyversetopandas/badge/?version=latest)](https://tidyversetopandas.readthedocs.io/en/latest/?badge=latest) [![PyPI version](https://badge.fury.io/py/tidyversetopandas.svg)](https://badge.fury.io/py/tidyversetopandas)
 
 ## 💪 Bringing the Power of tidyverse to Pandas!
 
