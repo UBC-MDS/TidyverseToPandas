@@ -85,10 +85,16 @@ def test_arrange_key_error(input_df_2):
         _ = ttp.arrange(input_df_2, False, "d", "e")
 
 
-def test_arrange_type_error(input_df_2):
+def test_arrange_column_type_error(input_df_2):
     """Test arrange function returns KeyError when input column name is not of str type"""
     with pytest.raises(TypeError):
         _ = ttp.arrange(input_df_2, False, ["a", "b"], 3)
+
+def test_arrange_dataframe_type_error():
+    """Test arrange function with a non-DataFrame input"""
+    with pytest.raises(TypeError):
+        non_df = "This is not a DataFrame"
+        _ = ttp.arrange(non_df, "a")
 
 
 def test_select_single_column(input_df_3):
