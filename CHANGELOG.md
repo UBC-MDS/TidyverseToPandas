@@ -2,11 +2,24 @@
 
 
 
+## v0.1.0 (2024-01-30)
+
+### Unknown
+
+* Merge pull request #83 from UBC-MDS/786213750-patch-1
+
+feat(update readme): test auto release ([`fcecdcf`](https://github.com/UBC-MDS/TidyverseToPandas/commit/fcecdcf616b171cea23d2c8058fd7293bd2b336c))
+
+
 ## v0.0.0 (2024-01-30)
 
 ### Build
 
 * build: added dev dependencies for docs ([`e257dca`](https://github.com/UBC-MDS/TidyverseToPandas/commit/e257dca2e26977dbbccf98a416cef02c04a872f8))
+
+### Feature
+
+* feat(update readme): test auto release ([`6bd8c46`](https://github.com/UBC-MDS/TidyverseToPandas/commit/6bd8c46802d7860376e0f29b139125586b110d88))
 
 ### Unknown
 
