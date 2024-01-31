@@ -2,6 +2,33 @@
 
 
 
+## v1.0.0 (2024-01-31)
+
+### Breaking
+
+* feat!: Major change of the project
+
+feat!: Major change of the project ([`cc0bd42`](https://github.com/UBC-MDS/TidyverseToPandas/commit/cc0bd429222f128ade0c9868bbcd65056ae172bc))
+
+* feat!: Major change of the project ([`1783f88`](https://github.com/UBC-MDS/TidyverseToPandas/commit/1783f887e0f4a4224e5c6ef93937a6b8b8ad7101))
+
+### Build
+
+* build(update project): update project
+
+build(update project): update project ([`a763a06`](https://github.com/UBC-MDS/TidyverseToPandas/commit/a763a0681e68a7ac8047004b43ff18243a508a32))
+
+* build(update project): update project ([`40cff5a`](https://github.com/UBC-MDS/TidyverseToPandas/commit/40cff5a1771b2453d462f92f58b4ed7c3e2ffd6e))
+
+### Unknown
+
+* major(New start): clean start for the project
+
+major(New start): clean start for the project ([`1ac8e70`](https://github.com/UBC-MDS/TidyverseToPandas/commit/1ac8e703140bc838d1706ccb573f86cebec4eea4))
+
+* major(New start): clean start for the project ([`1b6c0fc`](https://github.com/UBC-MDS/TidyverseToPandas/commit/1b6c0fc5188a0c0c68f469698da8b87a1fb3180c))
+
+
 ## v0.3.0 (2024-01-31)
 
 ### Feature
