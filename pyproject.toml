@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "tidyversetopandas"
-version = "0.1.0"
+version = "0.3.0"
 description = "Common tidyverse functions for pandas!"
 authors = ["Thomas, Sophia, Lily, Nando"]
 license = "MIT"

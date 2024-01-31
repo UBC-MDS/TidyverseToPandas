@@ -2,6 +2,37 @@
 
 
 
+## v0.3.0 (2024-01-31)
+
+### Feature
+
+* feat(fix readme): lets try it again
+
+feat(fix readme): lets try it again ([`d972adb`](https://github.com/UBC-MDS/TidyverseToPandas/commit/d972adb50105041c19031a7473556992fb8dd379))
+
+* feat(fix readme): lets try it again ([`0587056`](https://github.com/UBC-MDS/TidyverseToPandas/commit/05870569aec02f0afc076c0e918317ac1d5689e5))
+
+### Unknown
+
+* feature(test release): lets try it again
+
+feature(test release): lets try it again ([`6da08a1`](https://github.com/UBC-MDS/TidyverseToPandas/commit/6da08a1e560caa946b5d228fa0e1b82c81ba1e6a))
+
+* feature(test release): lets try it again ([`f50f6c5`](https://github.com/UBC-MDS/TidyverseToPandas/commit/f50f6c5aabd252b6859b55f38751a512012fdc92))
+
+* Merge pull request #87 from UBC-MDS/786213750-patch-1
+
+feature(fix bug): add again into readme ([`cb42384`](https://github.com/UBC-MDS/TidyverseToPandas/commit/cb42384f636b227d80f2f3135665503671fa508d))
+
+* feature(fix bug): add again into readme ([`f16ed41`](https://github.com/UBC-MDS/TidyverseToPandas/commit/f16ed4163cd2c2d44a8da487975be7913de9e327))
+
+* Merge pull request #86 from UBC-MDS/76-add-automatic-python-semantic-release
+
+feature(fixed toml): this will fix toml for sure ([`2332729`](https://github.com/UBC-MDS/TidyverseToPandas/commit/2332729985c63197db85a112a527de80bfe08529))
+
+* feature(fixed toml): this will fix toml for sure ([`044d4a1`](https://github.com/UBC-MDS/TidyverseToPandas/commit/044d4a1f4d233bc29d872d7ba95dbe7a85ddd0c7))
+
+
 ## v0.2.0 (2024-01-30)
 
 ### Feature
