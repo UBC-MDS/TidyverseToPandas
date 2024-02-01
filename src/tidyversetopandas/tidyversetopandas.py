@@ -37,7 +37,7 @@ def select(dataframe, *columns):
 
     Parameters:
     dataframe (pd.DataFrame): The DataFrame to select columns from.
-    columns (list of str): Column names to select.
+    columns (str): Column names to select.
 
     Returns:
     pd.DataFrame: A DataFrame with only the selected columns.
