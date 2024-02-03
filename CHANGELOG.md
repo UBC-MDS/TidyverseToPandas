@@ -2,6 +2,25 @@
 
 
 
+## v2.0.0 (2024-02-03)
+
+### Breaking
+
+* feat!: Prep for the final release
+
+feat!: Prep for the final release ([`6d16f3e`](https://github.com/UBC-MDS/TidyverseToPandas/commit/6d16f3e037e4a8cca80922f00daaefaa6594593a))
+
+* feat!: Prep for the final release ([`a5449d3`](https://github.com/UBC-MDS/TidyverseToPandas/commit/a5449d373a00180733b9bdb8d1420d13da4687d0))
+
+### Unknown
+
+* Merge pull request #94 from UBC-MDS/93-fix-select-columns-str
+
+fix: select column str addressed ([`2436b6d`](https://github.com/UBC-MDS/TidyverseToPandas/commit/2436b6de6b6a3fe447a3a8094d6c7b2cb4f71f54))
+
+* Fix: select column str addressed ([`b09fc58`](https://github.com/UBC-MDS/TidyverseToPandas/commit/b09fc584de51cd4c6207291e8ed6d0edda786331))
+
+
 ## v1.0.0 (2024-01-31)
 
 ### Breaking
