@@ -2,9 +2,20 @@
 
 
 
+## v3.0.0 (2024-02-03)
+
+### Breaking
+
+* feat!: This is the final release for milestone 4
+
+feat!: This is the final release for milestone 4 ([`e20b818`](https://github.com/UBC-MDS/TidyverseToPandas/commit/e20b818311aee4bb3073565a173a1ba69d865fa2))
+
+
 ## v2.0.0 (2024-02-03)
 
 ### Breaking
+
+* feat!: This is the final release for milestone 4 ([`53e5127`](https://github.com/UBC-MDS/TidyverseToPandas/commit/53e5127b87c9ab63032028dc8d09a605f5caffec))
 
 * feat!: Prep for the final release
 
